@@ -1,6 +1,6 @@
 const INITIAL_DELAY = 4500;
 const MAX_RETRIES = 3;
-const audio = new Audio('../assets/audios/notification.mp3'); // Caminho para o arquivo de áudio
+const audio = new Audio('../assets/audios/notification.mp3');
 
 async function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
