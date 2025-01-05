@@ -1,5 +1,7 @@
+const PORT = document.querySelector('meta[name="port"]')?.content || 5500;
+
 async function getServerInfo(token, guildId) {
-    const response = await fetch('http://localhost:5500/server-info', {
+    const response = await fetch(`http://localhost:${PORT}/server-info`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -15,3 +17,5 @@ async function getServerInfo(token, guildId) {
 }
 
 export { getServerInfo };
+
+
