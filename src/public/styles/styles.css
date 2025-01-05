@@ -1,0 +1,937 @@
+@font-face {
+  font-family: "DiscordText";
+  src: url("../assets/fonts/DiscordText.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "DiscordTitle";
+  src: url("../assets/fonts/DiscordTitle.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "DiscordTitleMedium";
+  src: url("../assets/fonts/DiscordTitleMedium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "WhitneySemiBold";
+  src: url("../assets/fonts/WhitneySemiBold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "WhitneyBold";
+  src: url("../assets/fonts/WhitneyBold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "WhitneyMedium";
+  src: url("../assets/fonts/WhitneyMedium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "WhitneyLight";
+  src: url("../assets/fonts/WhitneyLight.otf") format("opentype");
+}
+
+:root {
+  /* gray */
+  --gray1: #424549;
+  --gray2: #36393e;
+  --gray3: #282b30;
+  --gray4: #1e2124;
+  --gray5: #2b2e33;
+
+  /* blue */
+  --blue1: #7289da;
+  --blue2: #5865f2;
+
+  /* white */
+  --white: #fff;
+  --white95: #ffffff95;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background-color: var(--gray4);
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+nav {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-content {
+  font-family: "WhitneyMedium", sans-serif;
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "DiscordTitleMedium", sans-serif;
+  letter-spacing: 1px;
+  color: var(--blue2);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  width: 120px;
+}
+
+.logo-image {
+  width: 35px;
+  height: 35px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 5rem;
+  margin-top: 5px;
+  list-style: none;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: text 3s;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.join-server {
+  font-family: "WhitneyMedium", sans-serif;
+  padding: 8px 20px;
+  border-radius: 20px;
+  background-color: var(--white);
+  color: var(--gray4);
+  text-decoration: none;
+  font-size: 1rem;
+  white-space: nowrap;
+  transition: color 0.3s;
+  width: 120px;
+  text-align: center;
+}
+
+.join-server:hover {
+  color: #5865f2;
+}
+
+.hero {
+  width: 80%;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+.hero-content {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-text {
+  width: 45%;
+}
+
+.hero-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.hero-badge {
+  width: 64px;
+  height: 64px;
+  transition: transform 0.3s;
+}
+
+.hero-badge:hover {
+  transform: scale(1.1);
+}
+
+.hero-form {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero-input {
+  width: 100%;
+  padding: 1rem;
+  padding-right: 4rem;
+  border-radius: 8px;
+  border: 1px solid var(--white);
+  font-family: "WhitneyMedium", sans-serif;
+  font-size: 1rem;
+  background-color: var(--gray4);
+  color: var(--white);
+}
+
+.hero-input::placeholder {
+  color: var(--white95);
+}
+
+.hero-button {
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--blue1);
+  color: var(--white);
+  font-family: "WhitneyBold", sans-serif;
+  font-size: 1rem;
+  cursor: default;
+  transition: all 0.3s;
+  opacity: 0.5;
+}
+
+.hero-button.active {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.hero-button:hover {
+  transform: translateY(-2px);
+  background-color: var(--blue2);
+  color: var(--white);
+}
+
+.checkbox-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: calc(25% - 0.75rem);
+  justify-content: center;
+}
+
+.checkbox-item img {
+  width: 24px;
+  height: 24px;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1.5px solid var(--white);
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+}
+
+.checkbox-item input[type="checkbox"]:checked {
+  background-color: var(--gray1);
+  border: transparent;
+}
+
+.checkbox-item input[type="checkbox"]:checked::after {
+  content: "";
+  color: var(--white);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--white);
+}
+
+.checkbox-item label {
+  color: var(--white);
+  font-family: "WhitneyMedium", sans-serif;
+  font-size: 0.9rem;
+}
+
+.hero-title {
+  font-family: "DiscordTitle", sans-serif;
+  color: var(--white);
+  font-size: 2.7rem;
+  margin-bottom: -0.5rem;
+}
+
+.hero-subtitle {
+  margin-top: 15px;
+  font-family: "WhitneyMedium", sans-serif;
+  color: var(--white95);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.form-note {
+  color: var(--white95);
+  font-family: "WhitneyMedium", sans-serif;
+  font-size: 1rem;
+  margin-bottom: -0.5rem;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.input-status {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #43b581;
+  font-family: "WhitneyMedium", sans-serif;
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+hr {
+  max-width: 1200px;
+  border: none;
+  height: 1px;
+  background-color: var(--white);
+  opacity: 0.1;
+  margin: 5rem auto;
+  width: 80%;
+}
+
+.scrapper {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  width: 80%;
+  padding: 20px 40px;
+  background-color: var(--gray3);
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.scrapper-info {
+  width: 55%;
+}
+
+.scrapper-results {
+  background-color: var(--gray4);
+  width: 100%;
+  height: 410px;
+  border-radius: 15px;
+  color: var(--white95);
+  font-family: "WhitneyMedium", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gray1) transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scrapper-results .central-message {
+  margin: 0;
+  width: 100%;
+  color: var(--blue2);
+  font-size: 1.5rem;
+}
+
+.scrapper-results::-webkit-scrollbar-button {
+  display: none;
+}
+
+.scrapper-results::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrapper-results::-webkit-scrollbar-thumb {
+  background-color: var(--gray1);
+  border-radius: 10px;
+}
+
+.scrapper-results::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrapper-buttons {
+  max-width: 1200px;
+  display: none;
+  width: 80%;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.scrapper-button {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-family: "WhitneyBold", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.scrapper-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.scrapper-button.start {
+  background-color: var(--blue2);
+  color: var(--white);
+}
+
+.scrapper-button.start:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--blue1);
+}
+
+.scrapper-button.finish {
+  background-color: #f04747;
+  color: var(--white);
+}
+
+.scrapper-button.finish:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #f04747;
+}
+
+.scrapper-button.download {
+  background-color: #43b581;
+  color: var(--white);
+  margin-right: auto;
+}
+
+.scrapper-button.download:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.user-card {
+  background-color: var(--gray3);
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+}
+
+.user-card:hover {
+  background-color: var(--gray2);
+}
+
+.user-card-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.user-card-name {
+  color: var(--white);
+  font-family: "WhitneyMedium", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.user-card-member {
+  color: var(--white95);
+  font-family: "WhitneyLight", sans-serif;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  opacity: 0.7;
+}
+
+.user-card-badges {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.user-card-badge {
+  width: 20px;
+  height: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  width: 10%;
+}
+
+.user-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--gray1);
+  flex-shrink: 0;
+}
+
+.user-name {
+  color: var(--white);
+  font-family: "WhitneySemiBold", sans-serif;
+  font-size: 2rem;
+}
+
+.server-info {
+  background-color: var(--gray2);
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  width: 80%;
+}
+
+.server-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--gray1);
+  flex-shrink: 0;
+}
+
+.server-name {
+  color: var(--white);
+  font-family: "WhitneyMedium", sans-serif;
+  font-size: 1.2rem;
+}
+
+.server-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: var(--white);
+  font-family: "WhitneyMedium", sans-serif;
+  font-size: 1.5rem;
+  width: 300px;
+}
+
+.server-details span i {
+  margin-right: 10px;
+}
+
+.central-message {
+  font-family: "DiscordTitleMedium", sans-serif;
+  width: 80%;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  max-height: 40vh;
+  color: var(--blue1);
+  font-size: 1.7rem;
+}
+
+.server-details i {
+  font-size: 18px;
+  color: var(--gray1);
+}
+
+.server-progress[data-status="finished"] {
+  color: #f04747;
+}
+
+.how {
+  width: 80%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  margin: 0 auto;
+}
+
+.how-content {
+  flex: 1;
+}
+
+.how-content h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "DiscordTitle", sans-serif;
+  color: var(--white);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.how h3 {
+  font-family: "DiscordTitle", sans-serif;
+  color: var(--white);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.how p {
+  font-family: "WhitneyMedium", sans-serif;
+  color: var(--white95);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.how-image {
+  width: 400px;
+  height: 300px;
+  border-radius: 15px;
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+}
+
+.api-input-group {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.api-button {
+  opacity: 1;
+  cursor: pointer;
+  padding: 0 2rem;
+}
+
+.api-response {
+  background-color: var(--gray3);
+  padding: 1.5rem;
+  border-radius: 15px;
+  width: 400px;
+  height: 300px;
+  overflow-y: auto;
+}
+
+.api-response::-webkit-scrollbar {
+  width: 8px;
+}
+
+.api-response::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.api-response::-webkit-scrollbar-thumb {
+  background-color: var(--gray1);
+  border-radius: 10px;
+}
+
+.api-response {
+  scrollbar-width: thin;
+  scrollbar-color: var(--gray1) transparent;
+}
+
+#jsonResponse {
+  color: var(--white95);
+  font-family: monospace;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+
+.json-key {
+  color: #5865f2;
+}
+.json-string {
+  color: #43b581;
+}
+.json-number {
+  color: #faa61a;
+}
+.json-boolean {
+  color: #f04747;
+}
+.json-null {
+  color: #c287f1;
+}
+.github-button {
+  margin: 0;
+}
+
+.github-button a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.8rem 2rem;
+  background-color: var(--gray2);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: "WhitneyBold", sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.github-button a:hover {
+  background-color: var(--gray3);
+  transform: translateY(-2px);
+}
+
+.stargazers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  gap: 0.2rem;
+  margin-top: 2rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.stargazer {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.stargazer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.stargazer:hover img {
+  filter: grayscale(0%);
+}
+
+footer {
+  color: var(--white95);
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  justify-content: center;
+  font-family: "WhitneyMedium", sans-serif;
+}
+
+footer a {
+  text-decoration: underline;
+  color: var(--white95);
+}
+
+footer img {
+  width: 25px;
+  height: 25px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  filter: brightness(100);
+}
+
+@media (min-width: 769px) {
+  .how-content h3,
+  .github-button {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .github-button {
+    float: right;
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem 0;
+  }
+
+  .api-response {
+    width: 100%;
+    height: 200px;
+  }
+
+  .join-server {
+    margin-top: 20px;
+    margin-bottom: -35px;
+  }
+
+  .nav-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    width: auto;
+    margin-bottom: 1rem;
+  }
+
+  .nav-links {
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+
+  .hero {
+    margin-top: 2rem;
+    width: 90%;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-text,
+  .hero-form {
+    width: 100%;
+  }
+
+  .scrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .scrapper-info,
+  .scrapper-results {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .scrapper-info {
+    text-align: center;
+  }
+
+  .server-info,
+  .server-details {
+    width: 100%;
+    text-align: center;
+  }
+
+  .server-details span {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .scrapper-buttons {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .scrapper-button {
+    margin: 10px 20px;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .users-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .scrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .scrapper-info,
+  .scrapper-results {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .scrapper-buttons {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .how {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .how-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .github-button {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .how-content h3,
+  .github-button {
+    display: block;
+  }
+
+  .central-message {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}

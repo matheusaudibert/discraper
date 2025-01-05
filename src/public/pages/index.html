@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discord Badge Scraper</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/ico.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-content">
+        <a href="index.html" class="logo">
+          <img src="../assets/images/logo.png" alt="Logo" class="logo-image" />
+          <span>Discraper</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#start">Start</a></li>
+          <li><a href="#how">How</a></li>
+          <li><a href="#api">API</a></li>
+          <li><a href="#github">Github</a></li>
+        </ul>
+        <a href="https://discord.gg/jpMPGPcv" class="join-server"
+          >Join Server</a
+        >
+      </div>
+    </nav>
+    <section class="hero" id="start">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">DISCORD BADGE SCRAPER FOR ANY SERVER</h1>
+          <h3 class="hero-subtitle">
+            Easily extract and view all user badges in any Discord server by
+            providing a token and the server ID.
+          </h3>
+        </div>
+
+        <div class="hero-badges"></div>
+
+        <div class="hero-form">
+          <span class="form-note"
+            >Note: You must be a server member to scrape.
+            <br />
+            <br />
+            Don't have a token?
+            <a
+              style="text-decoration: none; color: rgb(82, 228, 143);"
+              href="https://www.youtube.com/watch?v=b1SY4zTNnAE"
+              >Get it here!</a
+            >
+          </span>
+
+          <div class="input-group">
+            <input
+              type="password"
+              class="hero-input"
+              placeholder="Your Discord Token"
+              autocomplete="off"
+            />
+            <span class="input-status"></span>
+          </div>
+
+          <div class="input-group">
+            <input
+              type="text"
+              class="hero-input"
+              placeholder="Server ID"
+              autocomplete="off"
+            />
+            <span class="input-status"></span>
+          </div>
+
+          <div class="checkbox-container">
+            <div class="checkbox-item">
+              <input
+                type="checkbox"
+                id="badge1"
+                checked
+                onclick="return false;"
+              />
+              <img
+                src="../assets/badges/early_supporter.png"
+                alt="Early Supporter"
+              />
+            </div>
+            <div class="checkbox-item">
+              <input
+                type="checkbox"
+                id="badge2"
+                checked
+                onclick="return false;"
+              />
+              <img
+                src="../assets/badges/early_verified_bot_developer.png"
+                alt="Partner"
+              />
+            </div>
+            <div class="checkbox-item">
+              <input
+                type="checkbox"
+                id="badge3"
+                checked
+                onclick="return false;"
+              />
+              <img src="../assets/badges/hypesquad_events.png" alt="Bravery" />
+            </div>
+            <div class="checkbox-item">
+              <input
+                type="checkbox"
+                id="badge4"
+                checked
+                onclick="return false;"
+              />
+              <img src="../assets/badges/bughunter_level2.png" />
+            </div>
+            <div class="checkbox-item">
+              <input
+                type="checkbox"
+                id="badge5"
+                checked
+                onclick="return false;"
+              />
+              <img src="../assets/badges/bughunter_level1.png" />
+            </div>
+            <div class="checkbox-item">
+              <input
+                type="checkbox"
+                id="badge6"
+                checked
+                onclick="return false;"
+              />
+              <img src="../assets/badges/partnered_server_owner.png" />
+            </div>
+            <div class="checkbox-item">
+              <input
+                type="checkbox"
+                id="badge7"
+                checked
+                onclick="return false;"
+              />
+              <img src="../assets/badges/discord_employee.png" />
+            </div>
+            <div class="checkbox-item">
+              <input
+                type="checkbox"
+                id="badge8"
+                checked
+                onclick="return false;"
+              />
+              <img src="../assets/badges/discord_certified_moderator.png" />
+            </div>
+          </div>
+
+          <button class="hero-button">Get Badges</button>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <div class="central-message">
+      <h2>
+        This is an
+        <span style="color: #f04747;">Unoficial</span> Application,<br />use at
+        your own risk!
+      </h2>
+    </div>
+
+    <div class="scrapper" style="display: none;">
+      <div class="scrapper-info">
+        <div class="user-info">
+          <img src="" alt="User Avatar" class="user-avatar" />
+          <span class="user-name">Username</span>
+        </div>
+
+        <div class="server">
+          <div class="server-info">
+            <img src="" alt="Server Icon" class="server-icon" />
+            <span class="server-name">Server Name</span>
+          </div>
+
+          <div class="server-details">
+            <span><i class="fa-solid fa-users"></i> Members: </span>
+            <span
+              ><i class="fa-solid fa-magnifying-glass"></i> Members to Fetch:
+            </span>
+            <span><i class="fa-solid fa-clock"></i> Estimated time: </span>
+            <span class="server-progress"
+              >Click <span style="color: #5865f2;">start</span> to scrape!</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="scrapper-results">
+        <div class="users-grid">
+          <div class="central-message"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scrapper-buttons" style="display: none;">
+      <button class="scrapper-button download" disabled>Download IDs</button>
+      <button class="scrapper-button start">Start</button>
+      <button class="scrapper-button finish">Finish</button>
+    </div>
+
+    <hr />
+
+    <div class="how" id="how">
+      <div class="how-content">
+        <h3>How?</h3>
+        <p>
+          Our site collects information from Discord servers by scanning member
+          data. To use it, you need to provide your Discord account token and
+          the server ID. Your token is only used during the process and is never
+          stored, ensuring your data remains secure. Once the required
+          information is entered, the tool connects to the server and processes
+          the member data. You must be a member of the server for the tool to
+          function properly. The entire process is <b>safe</b>, <b>fast</b>, and
+          <b>ensures your privacy throughout</b>.
+        </p>
+      </div>
+      <img
+        src="../assets/images/programmer.png"
+        alt="How to use"
+        class="how-image"
+      />
+    </div>
+
+    <hr />
+
+    <div class="how" id="api">
+      <div class="how-content">
+        <h3>API</h3>
+        <div class="api-input-group">
+          <input
+            type="text"
+            class="hero-input"
+            placeholder="User ID"
+            id="apiUserId"
+            autocomplete="off"
+          />
+        </div>
+        <p>
+          The application uses the API
+          <span
+            style="background-color: #7c7b7b5b; padding: 2px 4px; border-radius: 2px; font-size: 1rem;"
+            ><a
+              style="text-decoration: none; color:#ffffff95;;"
+              href="https://github.com/mesalytic/discord-lookup-api"
+              >(discordlookup.mesalytic.moe/v1/user/:id)</a
+            ></span
+          >
+          to fetch user information efficiently. This API allows us to retrieve
+          detailed data about Discord users, including their public profile
+          information and, consequently, their badges. By leveraging this API,
+          we ensure accurate and up-to-date results while maintaining a secure
+          and reliable process for accessing user data.
+        </p>
+      </div>
+      <div class="api-response">
+        <pre id="jsonResponse"></pre>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="how" id="github">
+      <div class="how-content">
+        <h3>Stargazers</h3>
+        <div class="github-button">
+          <a
+            href="https://github.com/matheusaudibert/discraper"
+            target="_blank"
+          >
+            <i class="fa-solid fa-star"></i>
+            Star on GitHub
+          </a>
+        </div>
+        <div class="stargazers-grid"></div>
+      </div>
+    </div>
+
+    <footer>
+      <img src="../assets/images/logo.png" alt="" />
+      Discraper by
+      <a href="https://github.com/matheusaudibert">@matheusaudibert</a>
+      <br />
+      <a href="https://github.com/matheusaudibert/discraper"
+        >This website is open source on GitHub</a
+      >
+    </footer>
+
+    <script src="../scripts/stargazers.js"></script>
+    <script type="module" src="../scripts/tokenChecker.js"></script>
+    <script type="module" src="../scripts/checkVisual.js"></script>
+    <script type="module" src="../scripts/randomBadges.js"></script>
+    <script src="../scripts/apiTest.js"></script>
+    <script src="../scripts/smoothScroll.js"></script>
+  </body>
+</html>
