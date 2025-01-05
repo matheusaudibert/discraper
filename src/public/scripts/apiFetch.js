@@ -50,7 +50,6 @@ async function checkUser(id, retryCount = 0) {
     }
 }
 
-
 let userIdsWithBadges = [];
 let isScrapingActive = true;
 
