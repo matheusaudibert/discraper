@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const serverInfoRouter = require('./server/serverInfo');
@@ -9,7 +10,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', serverInfoRouter);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
