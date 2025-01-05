@@ -98,7 +98,6 @@ nav {
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
   font-family: "DiscordTitleMedium", sans-serif;
   letter-spacing: 1px;
   color: var(--blue2);
@@ -652,7 +651,7 @@ hr {
 
 .how-image {
   width: 400px;
-  height: 245px;
+  height: 301.69px;
   border-radius: 15px;
   object-fit: cover;
   max-width: 100%;
@@ -830,7 +829,6 @@ footer img {
 
   .logo {
     width: auto;
-    margin-bottom: 1rem;
   }
 
   .nav-links {
@@ -886,6 +884,10 @@ footer img {
     align-items: center;
   }
 
+  .hero-text {
+    text-align: center;
+  }
+
   .scrapper-button {
     margin: 10px 20px;
     width: 80%;
@@ -939,5 +941,13 @@ footer img {
   .central-message {
     font-size: 1.5rem;
     text-align: center;
+  }
+
+  .hero-badges {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+    gap: 1rem;
+    align-items: center;
   }
 }
