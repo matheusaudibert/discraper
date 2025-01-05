@@ -456,6 +456,13 @@ hr {
   background-color: #43b581;
   color: var(--white);
   margin-right: auto;
+  opacity: 0.5; /* Adicionado para iniciar desabilitado */
+  cursor: not-allowed; /* Adicionado para iniciar desabilitado */
+}
+
+.scrapper-button.download:enabled {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .scrapper-button.download:disabled {
@@ -551,7 +558,7 @@ hr {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   width: 80%;
 }
 
@@ -645,11 +652,10 @@ hr {
 
 .how-image {
   width: 400px;
-  height: 300px;
+  height: 245px;
   border-radius: 15px;
   object-fit: cover;
   max-width: 100%;
-  height: auto;
 }
 
 .api-input-group {

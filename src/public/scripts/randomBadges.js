@@ -24,11 +24,11 @@ const badges = [
         alt: 'HypeSquad Events Badge'
     },
     {
-        src: '../assets/badges/bughunter_level1.png',
+        src: '../assets/badges/bughunter_level_1.png',
         alt: 'Bug Hunter Badge'
     },
     {
-        src: '../assets/badges/bughunter_level2.png',
+        src: '../assets/badges/bughunter_level_2.png',
         alt: 'Bug Hunter Gold Badge'
     },
     {

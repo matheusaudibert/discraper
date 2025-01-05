@@ -60,7 +60,6 @@ async function processIds(ids) {
     const finishButton = document.querySelector('.scrapper-button.finish');
     downloadButton.disabled = true;
     
-    
     startButton.disabled = true;
     startButton.textContent = 'Started!';
 
@@ -77,7 +76,7 @@ async function processIds(ids) {
 
     for (const batch of queue) {
         if (!isScrapingActive) {
-            downloadButton.disabled = true;
+            downloadButton.disabled = userIdsWithBadges.length === 0;
             serverProgress.textContent = "Finished!";
             serverProgress.setAttribute('data-status', 'finished');
             finishButton.textContent = "Finished!";
@@ -92,7 +91,7 @@ async function processIds(ids) {
         foundCount += foundInBatch;
 
         if (foundInBatch > 0) {
-            audio.play(); // Tocar o áudio se pelo menos um usuário for encontrado no grupo
+            audio.play(); 
         }
 
     
@@ -116,8 +115,6 @@ async function processIds(ids) {
             finishButton.textContent = "Finished!";
             finishButton.disabled = true;
         }
-
-        console.log(`Progresso: ${processedCount}/${ids.length} (${foundCount} encontrados)`);
     }
 }
 
@@ -152,7 +149,7 @@ function downloadIds() {
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'discrapper.com.txt';
+    a.download = 'discraper.com.txt';
     document.body.appendChild(a);
     a.click();
     window.URL.revokeObjectURL(url);
@@ -163,11 +160,13 @@ function stopScraping() {
     isScrapingActive = false;
     const serverProgress = document.querySelector('.server-progress');
     const finishButton = document.querySelector('.scrapper-button.finish');
+    const downloadButton = document.querySelector('.scrapper-button.download');
     
     serverProgress.textContent = "Finished!";
     serverProgress.setAttribute('data-status', 'finished');
     finishButton.textContent = "Finished!";
     finishButton.disabled = true;
+    downloadButton.disabled = userIdsWithBadges.length === 0;
 }
 
 export { processIds, stopScraping, downloadIds };
