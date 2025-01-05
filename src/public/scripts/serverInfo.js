@@ -1,5 +1,5 @@
 async function getServerInfo(token, guildId) {
-    const response = await fetch('http://localhost:3000/server-info', {
+    const response = await fetch('http://localhost:5500/server-info', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
