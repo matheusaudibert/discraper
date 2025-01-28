@@ -241,7 +241,6 @@ nav {
 }
 
 .checkbox-item {
-  cursor: default;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -261,7 +260,7 @@ nav {
   border: 1.5px solid var(--white);
   appearance: none;
   -webkit-appearance: none;
-  cursor: pointer;
+  cursor: default;
   position: relative;
   background-color: transparent;
 }
