@@ -4,9 +4,8 @@
   "description": "Discord Badge Scraper",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
-    "postinstall": "node scripts/patch-discord.js"
+    "start": "node scripts/patch-discord.js && node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
