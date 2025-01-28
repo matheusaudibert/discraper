@@ -1,4 +1,4 @@
-# 🤖 Discord Rare Badge Scraper (Discraper)
+# [🤖 Discord Rare Badge Scraper (Discraper)](https://discraper.onrender.com)
 
 An advanced application that scrapes all members of a Discord server and identifies users with rare badges. The tool is fast, efficient, and perfect for analyzing and extracting valuable information about a Discord community.
 
