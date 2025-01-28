@@ -40,6 +40,6 @@ fs.readFile(filePath, "utf8", (err, data) => {
       return;
     }
 
-    console.log("Patched!");
+    console.log("Patched success!");
   });
 });
