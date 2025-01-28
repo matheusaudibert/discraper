@@ -21,7 +21,7 @@ This tool returns the following rare badges:
 
 | Badge Name                       | Badge Image                                                                  |
 | -------------------------------- | ---------------------------------------------------------------------------- |
-| **Early Supporter**              | ![Badge 1](..main/src/public/assets/badges/early_supporter.png)              |
+| **Early Supporter**              | ![Badge 1](..src/public/assets/badges/early_supporter.png)                   |
 | **Early Verified Bot Developer** | ![Badge 2](..main/src/public/assets/badges/early_verified_bot_developer.png) |
 | **Hypesquad Events**             | ![Badge 3](..main/src/public/assets/badges/hypesquad_events.png)             |
 | **Bug Hunter Level 1**           | ![Badge 4](..main/src/public/assets/badges/bughunter_level_1.png)            |
