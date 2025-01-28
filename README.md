@@ -12,8 +12,8 @@ An advanced application that scrapes all members of a Discord server and identif
 ## Requirements
 
 - Your own Discord account's token (safe and secure to use).
-- [discordlookup.mesalytic.moe API](https://discordlookup.mesalytic.moe/v1/user/:id).
-- [discord.js-selfbot-v13 library](https://github.com/DiscordJS/discord.js-selfbot-v13).
+- [discordlookup.mesalytic.moe API](https://github.com/mesalytic/discord-lookup-api).
+- [discord.js-selfbot-v13 library](https://github.com/aiko-chan-ai/discord.js-selfbot-v13).
 
 ## Badges
 
