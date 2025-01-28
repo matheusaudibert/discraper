@@ -19,16 +19,16 @@ An advanced application that scrapes all members of a Discord server and identif
 
 This tool returns the following rare badges:
 
-| Badge Name                       | Badge Image                                                                  |
-| -------------------------------- | ---------------------------------------------------------------------------- |
-| **Early Supporter**              | ![Badge 1](..src/public/assets/badges/early_supporter.png)                   |
-| **Early Verified Bot Developer** | ![Badge 2](..main/src/public/assets/badges/early_verified_bot_developer.png) |
-| **Hypesquad Events**             | ![Badge 3](..main/src/public/assets/badges/hypesquad_events.png)             |
-| **Bug Hunter Level 1**           | ![Badge 4](..main/src/public/assets/badges/bughunter_level_1.png)            |
-| **Bug Hunter Level 2**           | ![Badge 5](..main/src/public/assets/badges/bughunter_level_2.png)            |
-| **Discord Employee**             | ![Badge 6](..main/src/public/assets/badges/discord_employee.png)             |
-| **Partnered Server Owner**       | ![Badge 7](..main/src/public/assets/badges/partnered_server_owner.png)       |
-| **Discord Certified Moderator**  | ![Badge 8](..main/src/public/assets/badges/discord_certified_moderator.png)  |
+| Badge Name                       | Badge Image                                                           |
+| -------------------------------- | --------------------------------------------------------------------- |
+| **Early Supporter**              | ![Badge 1](src/public/assets/badges/early_supporter.png)              |
+| **Early Verified Bot Developer** | ![Badge 2](src/public/assets/badges/early_verified_bot_developer.png) |
+| **Hypesquad Events**             | ![Badge 3](src/public/assets/badges/hypesquad_events.png)             |
+| **Bug Hunter Level 1**           | ![Badge 4](src/public/assets/badges/bughunter_level_1.png)            |
+| **Bug Hunter Level 2**           | ![Badge 5](src/public/assets/badges/bughunter_level_2.png)            |
+| **Discord Employee**             | ![Badge 6](src/public/assets/badges/discord_employee.png)             |
+| **Partnered Server Owner**       | ![Badge 7](src/public/assets/badges/partnered_server_owner.png)       |
+| **Discord Certified Moderator**  | ![Badge 8](src/public/assets/badges/discord_certified_moderator.png)  |
 
 ## Usage
 
@@ -41,7 +41,3 @@ This tool requires the use of your own account's token. While this is necessary 
 Use the tool responsibly and ensure you're complying with Discord's Terms of Service. This tool is intended for ethical use in analyzing your own communities or those you have permission to interact with.
 
 For best results, it is recommended to use the tool on servers with fewer than 10,000 members to ensure the scraping process remains accurate.
-
-## License
-
-This project is licensed under the MIT License.
