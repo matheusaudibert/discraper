@@ -4,11 +4,7 @@ A robust application that scrapes all members of a Discord server and identifies
 
 ## Usage
 
-<<<<<<< HEAD
 You can use the tool directly on the website: [https://discraper.audibert.dev](https://discraper.audibert.dev).
-=======
-You can use the tool directly on the website: [https://discraper.onrender.com](https://discraper.onrender.com).
->>>>>>> e563f4304b0567603e30b7e8c705a2136d2675b3
 
 This tool requires the use of your own account's token. While this is necessary for it to function properly, rest assured that using the token is safe and secure.
 
