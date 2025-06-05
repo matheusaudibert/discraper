@@ -2,6 +2,12 @@
 
 A robust application that scrapes all members of a Discord server and identifies users with rare badges. The tool is fast, efficient, and perfect for analyzing and extracting valuable information about a Discord community.
 
+## Usage
+
+You can use the tool directly on the website: [https://discraper.audibert.dev](https://discraper.audibert.dev).
+
+This tool requires the use of your own account's token. While this is necessary for it to function properly, rest assured that using the token is safe and secure.
+
 ## Features
 
 - Scrapes all members of a Discord server.
@@ -29,12 +35,6 @@ This tool returns the following rare badges:
 | **Discord Employee**             | ![Badge 6](src/public/assets/badges/discord_employee.png)             |
 | **Partnered Server Owner**       | ![Badge 7](src/public/assets/badges/partnered_server_owner.png)       |
 | **Discord Certified Moderator**  | ![Badge 8](src/public/assets/badges/discord_certified_moderator.png)  |
-
-## Usage
-
-You can use the tool directly on the website: [https://discraper.onrender.com](https://discraper.onrender.com).
-
-This tool requires the use of your own account's token. While this is necessary for it to function properly, rest assured that using the token is safe and secure.
 
 ## Disclaimer
 
